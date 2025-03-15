@@ -26,7 +26,7 @@ plugins:
 
 ### 基础查询
 ```bash
-yunhei <用户ID>
+yunhei <用户QQID>   
 示例：yunhei 123456
 ```
 

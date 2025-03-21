@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-yunhei-query",
   "description": "一个用于qimeng的yunhei-api调用插件，以后可能会有别的功能",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "contributors": [
     "Lanyu-cn <zhang78816@outlook.com>"
   ],

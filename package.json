@@ -1,0 +1,33 @@
+{
+  "name": "koishi-plugin-yunhei-query",
+  "description": "一个用于qimeng的yunhei-api调用插件，以后可能会有别的功能",
+  "version": "1.0.6",
+  "contributors": [
+    "Lanyu-cn <zhang78816@outlook.com>"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "homepage": "https://github.com/Feng11z/qimeng-yunhei",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feng11z/qimeng-yunhei.git"
+  },
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.18.7"
+  }
+}

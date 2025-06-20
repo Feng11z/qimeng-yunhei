@@ -1,10 +1,12 @@
-# Koishi 云黑信息查询插件
+# koishi-plugin-yunhei-query   Koishi 云黑信息查询插件
 
 🔍 一个安全高效的云黑名单查询插件，支持速率限制与详尽的错误处理机制，目前只有趣绮梦的适配。
 
+[![npm](https://img.shields.io/npm/v/koishi-plugin-yunhei-query?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-yunhei-query)
 [![koishi-plugin](https://img.shields.io/badge/Koishi-Plugin-blueviolet)](https://koishi.chat/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
+一个用于 qimeng 的 yunhei-api 调用插件，支持查询云黑信息，未来可能会扩展其他功能
 ## 功能特性
 
 - 🚀 实时云黑状态查询
@@ -14,6 +16,7 @@
 - 🛡️ 敏感信息自动脱敏
 - 📝 多维度日志记录
 - 🧩 开箱即用的配置方案
+- 🔄 支持多种 API 响应格式（单个对象数组/多个对象数组）
 
 ## 安装
 
@@ -49,12 +52,26 @@ yunhei <QQID>
 ```
 
 ### 查询结果示例
-```text
+```bash
 === 云黑查询结果 ===
-云黑状态：已记录
+用户ID：123456789
+--- 基础信息 ---
+手机号：未绑定
+微信：已绑定
+支付宝：未绑定
+实名认证：已绑定
+--- 活跃信息 ---
+加群数：5
+月活数量：100
+累计发送：500
+首次发送：2023-01-01
+最后发送：2023-12-31
+--- 云黑信息 ---
+云黑状态：是
 类型判定：yunhei
 原因说明：流模换模
 处理人员：幻梦
+云黑等级：高风险
 记录日期：2023-08-20
 ```
 
@@ -98,6 +115,17 @@ yunhei <QQID>
 ### Q3: 如何调整频率限制？
 在配置中修改 rateLimit 值，或者在koishi插件管理移动滑条后，重载插件。
 
+### Q4: 如何处理 API 响应结构异常？
+如果出现 "API响应结构异常" 错误，请确认：
+1. 服务端返回的 JSON 格式符合接口规范
+2. info 数组包含至少一个有效对象
+3. 必要字段存在且类型正确
+
+### Q5: 如何处理未知网络错误？
+如果出现 "未知网络错误" 或 "服务器内部错误"，请确认：
+1. 网络连接正常
+2. API 端点地址配置正确
+3. API 密钥有效且具有访问权限
 
 ## 贡献指南
 
